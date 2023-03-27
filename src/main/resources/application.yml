@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  devtools:
+    restart:
+      enabled: true #开启热部署
+      additional-paths: src/main/java #重启目录
+      additional-exclude: WEB-INF/**
+  freemarker:
+    cache: false  #页面不加载缓存，修改立即生效
+  banner:
+    location: banner.txt
+  security:
+    user:
+      name: cheng
+      password: 123456
+      roles:
+        - user
+        - admin
+  datasource:
+    username: root
+    password: cyx520&zq
+    url: jdbc:mysql://localhost:3306/mybatis_db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    static-path-pattern: /static/**
+
+test:
+  name: cheng
+
